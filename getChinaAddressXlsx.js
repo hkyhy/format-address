@@ -3,7 +3,7 @@ import address from './address.json';
 
 import getAddressList from './getAddressList';
 
-const getChinaAddressXlsx = ({jsonTitle = [{title: '区', key: 'area'},{title: '市', key: 'city'},{title: '省', key: 'province'}], fileName = 'file.xlsx'}) => {
+const getChinaAddressXlsx = ({ jsonTitle = [{title: '区', key: 'area'},{title: '市', key: 'city'},{title: '省', key: 'province'}], fileName = 'file.xlsx' }) => {
   const jsonData = jsonTitle.map(item => item.title);
 
   Object.keys(address.province.list).filter(item => !['provinces', 'municipality'].includes(item)).forEach(item => {
